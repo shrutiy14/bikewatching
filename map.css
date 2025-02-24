@@ -14,3 +14,17 @@ html, body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for effect */
     border-radius: 8px; /* Optional: rounded corners */
   }
+/*
+  #map svg {
+    background: yellow;
+    opacity: 50%;
+  }*/
+
+  #map svg {
+    position: absolute; /* Position it on top of the map */
+    z-index: 1;         /* Ensure it's on top of the map */
+    width: 100%;        /* Make it fill the map container */
+    height: 100%;       /* Ensure it takes the full height of the map */
+    pointer-events: none; /* Allow map interaction (panning/zooming) while the SVG is overlaid */
+  }
+  
