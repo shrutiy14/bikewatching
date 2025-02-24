@@ -27,4 +27,12 @@ html, body {
     height: 100%;       /* Ensure it takes the full height of the map */
     pointer-events: none; /* Allow map interaction (panning/zooming) while the SVG is overlaid */
   }
+
+ #map svg circle {
+  /*  fill-opacity: 0.6;   /* Set fill opacity for circles */
+ /*   stroke: white;      /* White stroke for better contrast */
+  /*  stroke-width: 1;     /* Border thickness */
+    pointer-events: auto; /* Allow tooltips on circles */
+}
+  
   

@@ -122,7 +122,13 @@ map.on('load', async () => {
         .attr('fill', 'steelblue')  // Circle fill color
         .attr('stroke', 'white')    // Circle border color
         .attr('stroke-width', 1)    // Circle border thickness
-        .attr('opacity', 0.6);      // Circle opacity
+        .attr('opacity', 0.6)      // Circle opacity
+        .each(function(d) {
+            // Add <title> for browser tooltips
+            d3.select(this)
+              .append('title')
+              .text(`${d.totalTraffic} trips (${d.departures} departures, ${d.arrivals} arrivals)`);
+          });
 
         function updatePositions() {
             circles
