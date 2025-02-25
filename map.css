@@ -34,5 +34,31 @@ html, body {
   /*  stroke-width: 1;     /* Border thickness */
     pointer-events: auto; /* Allow tooltips on circles */
 }
+
+header {
+  display: flex;
+  gap: 1em;
+  align-items: baseline;
+}
+
+label {
+  margin-left: auto; /* Push the label to the right */
+}
+/*
+input[type="range"] {
+  width: 300px; /* Set a fixed width for the slider */
+/*}*/
+
+time {
+  display: block;
+  margin-top: 0.5em;
+}
+
+em {
+  display: block;
+  color: #aaa; /* Light gray color for the "Any time" text */
+  font-style: italic;
+}
+
   
   

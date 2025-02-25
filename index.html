@@ -11,8 +11,18 @@
   <link rel="stylesheet" href="map.css" />
 </head>
 <body>
-  <h1> 🚴🏼‍♀️ Bikewatching</h1>
-  <p>Interactive map visualization of bike traffic in Boston area during different times of the day.</p>
+  <header>
+    <h1> 🚴🏼‍♀️ Bikewatching</h1>
+    <p>Interactive map visualization of bike traffic in Boston area during different times of the day.</p>
+    <div>
+      <label for="timeSlider">
+        Filter by time:
+        <input type="range" id="timeSlider" min="-1" max="1440" value="-1" step="1">
+        <time id="timeDisplay">Any time</time>
+      </label>
+    </div>
+  </header>
+
   <div id="map">
     <svg></svg>
   </div>
