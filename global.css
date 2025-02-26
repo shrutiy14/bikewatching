@@ -8,3 +8,46 @@ body {
     margin: auto;
     padding: 1em;
   }
+
+  /* Global color rules for circles and legend items */
+circle {
+  --color-departures: steelblue;
+  --color-arrivals: darkorange;
+  --color: color-mix(
+    in oklch,
+    var(--color-departures) calc(100% * var(--departure-ratio)),
+    var(--color-arrivals)
+  );
+  fill: var(--color);  /* Set fill color using the computed value */
+}
+
+.legend {
+  display: flex;
+  gap: 1em;
+  margin-block: 1em;
+  align-items: center;
+}
+
+.legend > div {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: lightgray;
+  --departure-ratio: 0; /* Default */
+  color: white;
+}
+
+/* Apply color mixing for legend items based on departure ratio */
+.legend > div {
+  --color-departures: steelblue;
+  --color-arrivals: darkorange;
+  --color: color-mix(
+    in oklch,
+    var(--color-departures) calc(100% * var(--departure-ratio)),
+    var(--color-arrivals)
+  );
+  background-color: var(--color);
+}
+
+  
+  

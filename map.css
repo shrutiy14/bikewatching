@@ -32,7 +32,15 @@ html, body {
   /*  fill-opacity: 0.6;   /* Set fill opacity for circles */
  /*   stroke: white;      /* White stroke for better contrast */
   /*  stroke-width: 1;     /* Border thickness */
-    pointer-events: auto; /* Allow tooltips on circles */
+  pointer-events: auto; /* Allow tooltips on circles */
+    --color-departures: steelblue;
+    --color-arrivals: darkorange;
+    --color: color-mix(
+    in oklch,
+    var(--color-departures) calc(100% * var(--departure-ratio)),
+    var(--color-arrivals)
+  );
+  fill: var(--color);  /* Set fill color using the computed value */
 }
 
 header {
@@ -60,5 +68,3 @@ em {
   font-style: italic;
 }
 
-  
-  
